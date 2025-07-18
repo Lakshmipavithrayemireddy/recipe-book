@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Recipe Book</h1>
+    <button id="add-recipe-btn">+ Add Recipe</button>
+  </header>
+
+  <main>
+    <div id="recipes-container"></div>
+  </main>
+
+  <!-- Modal for Add/Edit -->
+  <div class="modal hidden" id="recipe-modal">
+    <div class="modal-content">
+      <h2 id="modal-title">Add Recipe</h2>
+      <form id="recipe-form">
+        <input type="hidden" id="recipe-id" />
+        <label>
+          Title:
+          <input type="text" id="recipe-title" required />
+        </label>
+        <label>
+          Ingredients (one per line):
+          <textarea id="recipe-ingredients" required></textarea>
+        </label>
+        <label>
+          Instructions:
+          <textarea id="recipe-instructions" required></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" id="save-btn">Save</button>
+          <button type="button" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
